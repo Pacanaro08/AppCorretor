@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdcImagem">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageSwitcher
+            android:id="@+id/imageIs"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="60dp"
+            android:text="Próxima"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageIs" />
+
+        <Button
+            android:id="@+id/pickImagesBtn"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="12dp"
+            android:text="Selecionar"
+            app:layout_constraintStart_toEndOf="@+id/previousBtn"
+            app:layout_constraintTop_toBottomOf="@+id/imageIs" />
+
+        <Button
+            android:id="@+id/previousBtn"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/imageIs"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="12dp"
+            android:text="Anterior"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageIs" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="128dp"
+            android:text="Salvar Imagens"
+            app:layout_constraintEnd_toStartOf="@+id/nextBtn"
+            app:layout_constraintTop_toBottomOf="@+id/imageIs" />
+
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/saveBtn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pickImagesBtn"
+            app:layout_constraintTop_toBottomOf="@+id/imageIs"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
